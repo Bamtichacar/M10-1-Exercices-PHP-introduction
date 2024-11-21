@@ -544,14 +544,162 @@ foreach($depHautDeFrance as $num => $value) {
     echo "Le département $value a le numéro $num <br>";
 }
 
-
-
 echo "<br>";
 echo "<br>";
 
 
 
+/* --------------------------------  PHP - Les fonctions  */
+echo "<h1>LES FONCTIONS</h1>";
 
+
+/* Exercice 1
+Faire une fonction qui retourne true. */
+echo "<h3>Exercice 1</h3>";
+
+function retourneTrue (){
+    return true;
+}
+var_dump (retourneTrue());
+
+
+
+echo "<br>";
+echo "<br>";
+/* Exercice 2
+Faire une fonction qui prend en paramètre une chaine de caractères et qui retourne cette même chaine. */
+echo "<h3>Exercice 2</h3>";
+
+function retourneChainePasseeEnParametres ($chaine) {
+    return $chaine;
+}
+echo retourneChainePasseeEnParametres ("hi");
+
+echo "<br>";
+// 2e version
+function retourneChainePasseeEnParametresVersion2 ($chaine) {
+    echo $chaine;
+}
+retourneChainePasseeEnParametresVersion2 ("hi");
+
+
+
+echo "<br>";
+echo "<br>";
+/* Exercice 3
+Faire une fonction qui prend en paramètre deux chaines de caractères et qui renvoit la concaténation de ces deux chaines  */
+echo "<h3>Exercice 3</h3>";
+
+function concatDesDeuxChainesEnParametre ($chaine1, $chaine2) {
+    return $chaine1 . $chaine2;
+}
+echo concatDesDeuxChainesEnParametre ("etoile","polaire");
+
+echo "<br>";
+echo "<br>";
+/* Exercice 4
+Faire une fonction qui prend en paramètre deux nombres. La fonction doit retourner : -Le premier nombre est plus grand si le premier nombre est plus grand que le deuxième - Le premier nombre est plus petit si le premier nombre est plus petit que le deuxième - Les deux nombres sont identiques si les deux nombres sont égaux  */
+echo "<h3>Exercice 4</h3>";
+function verifNombres ($a,$b) {
+    if($a>$b) {
+        echo "Le premier nombre est plus grand";
+    } else if($a<$b) {
+        echo "Le premier nombre est plus petit";
+    } else {
+        echo "Les deux nombres sont identiques";
+    }
+}
+
+verifNombres (3,5);
+echo "<br>";
+verifNombres (8,8);
+echo "<br>";
+verifNombres (9,5);
+echo "<br>";
+
+
+
+
+
+echo "<br>";
+echo "<br>";
+/* Exercice 5
+Faire une fonction qui prend en paramètre un nombre et une chaine de caractères et qui renvoit la concaténation de ces deux paramètres. */
+echo "<h3>Exercice 5</h3>";
+
+function concatNombreEtChaaine ($nombre,$chaine) {
+    return $nombre . $chaine;
+}
+echo concatNombreEtChaaine (5," c'est le chiffre cinq");
+
+
+echo "<br>";
+echo "<br>";
+/* Exercice 6
+Faire une fonction qui prend trois paramètres : nom, prenom et age. Elle doit renvoyer une chaine de la forme :
+"Bonjour" + nom + prenom + ",tu as" + age + "ans".  */
+echo "<h3>Exercice 6</h3>";
+function nomPrenomAge ($nom, $prenom, $age) {
+    echo "Bonjour ". $nom ." ". $prenom ." tu as ". $age . "ans";
+}
+
+nomPrenomAge ("Pignon", "François", 33);
+
+
+
+echo "<br>";
+echo "<br>";
+/* Exercice 7
+Faire une fonction qui prend deux paramètres : age et genre. Le paramètre genre peut prendre comme valeur : - Homme - Femme
+La fonction doit renvoyer en fonction des paramètres : -Vous êtes un homme et vous êtes majeur - Vous êtes un homme et vous êtes mineur - Vous êtes une femme et vous êtes majeur - Vous êtes une femme et vous êtes mineur
+Gérer tous les cas.  */
+echo "<h3>Exercice 7</h3>";
+
+function ageEtGenre ($age, $genre) {
+    if($age>18 && $genre ==="Homme") {
+        echo "Vous êtes un homme et vous êtes majeur";
+    } else if ($age< 18 && $genre === "Homme") {
+        echo "Vous êtes un homme et vous êtes mineur";
+    } else if ($age> 18 && $genre === "Femme") {
+        echo "Vous êtes une femme et vous êtes majeur";
+    } else {
+        echo "Vous êtes une femme et vous êtes mineur";        
+    }
+}
+
+ageEtGenre (15,"Femme");
+echo "<br>";
+ageEtGenre (22,"Femme");
+echo "<br>";
+ageEtGenre (12,"Homme");
+echo "<br>";
+ageEtGenre (20,"Homme");
+
+echo "<br>";
+echo "<br>";
+/* Exercice 8
+Faire une fonction qui prend en paramètre trois nombres et qui renvoit la somme de ces nombres.
+Tous les paramètres doivent avoir une valeur par défaut */
+echo "<h3>Exercice 8</h3>";
+
+function sommeDeTroisNbAvecValeursParDefaut ($a=3, $b=5, $c=2) {
+    echo $a + $b + $c;
+}
+
+sommeDeTroisNbAvecValeursParDefaut ();
+echo "<br>";
+sommeDeTroisNbAvecValeursParDefaut (1,1);
+echo "<br>";
+sommeDeTroisNbAvecValeursParDefaut (null,0,2);
+echo "<br>";
+sommeDeTroisNbAvecValeursParDefaut (2,0,2);
+echo "<br>";
+sommeDeTroisNbAvecValeursParDefaut (2,0,null);
+echo "<br>";
+sommeDeTroisNbAvecValeursParDefaut (2,0,2);
+echo "<br>";
+sommeDeTroisNbAvecValeursParDefaut (2,0,2);
+echo "<br>";
 
 
 
