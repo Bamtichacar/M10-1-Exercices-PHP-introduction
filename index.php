@@ -1,6 +1,6 @@
 <?php
 
-/* PHP - Les variables  */
+/* ----------------------     PHP - Les variables  */
 
 /* Exercice 1 : Créer une variable nom et l'initialiser avec la valeur de votre choix. Afficher son contenu  */
 
@@ -107,16 +107,140 @@ echo "<br>";
 
 
 
+echo "<br>";
+/* --------------------------   PHP - Les conditions  */
+
+
+/* Exercice 1 :
+Créer une variable age et l'initialiser avec une valeur.
+Si l'age est supérieur ou égale à 18, afficher Vous êtes majeur. Dans le cas contraire, afficher Vous êtes mineur.
+ */
+$age = 10;
+if ($age > 18) {
+    echo "Vous êtes majeur";
+} else {
+    echo "Vous êtes mineur";
+}
+echo "<br>";
+
+// ou alors :
+echo $age > 18 ?  "Vous êtes majeur" : "Vous êtes mineur";
+
+
+
+echo "<br>";
+echo "<br>";
+/* Exercice 2 :
+Créer deux variables age et genre. La variable genre peut prendre comme valeur : - Homme - Femme
+En fonction de l'âge et du genre afficher la phrase correspondante : -Vous êtes un homme et vous êtes majeur - Vous êtes un
+homme et vous êtes mineur - Vous êtes une femme et vous êtes majeur - Vous êtes une femme et vous êtes mineur
+Gérer tous les cas. */
+$age = 55;
+$genre = "Femme";
+
+if ($genre === "Homme" && $age >18) {
+    echo "Vous êtes un homme et vous êtes majeur";
+} else if ($genre = "Homme" && $age < 18){
+    echo "Vous êtes un homme et vous êtes mineur";
+} elseif ($genre = "Femme"&& $age > 18){
+    echo "Vous êtes une femme et vous êtes majeure";
+} else {
+    echo "Vous êtes une femme et vous êtes mineure";
+}
+
+echo "<br>";
+
+// ou alors
+if ($age>18) {
+    if ($genre === "Homme") {
+        echo "Vous êtes un homme et vous êtes majeur";
+    } else {
+        echo "Vous êtes une femme et vous êtes majeure";
+    }
+} else if ($genre === "Homme") {
+    echo "Vous êtes un homme et vous êtes mineur";
+} else {
+    echo "Vous êtes une femme et vous êtes mineure";
+}
+
+
+// ATTENTION on ne peut pas faire comma ça, ne marche pas : 
+/* if ($age>18) {
+    global $genre;
+    echo $genre = "Homme" ? "Vous êtes un homme et vous êtes majeur" : "Vous êtes une femme et vous êtes majeure";
+} else {
+    echo $genre = "Homme" ? "Vous êtes un homme et vous êtes mineur" : "Vous êtes une femme et vous êtes mineure";
+}
+ */
+
+
+echo "<br>";
+echo "<br>";
+/* Exercice 3 :
+Traduire ce code avec des if et des else :
+<?php
+echo ($maVariable != 'Homme') ? 'C\'est une développeuse !!!' : 'C\'est un développeur !!!';
+?>  */
+$maVariable = 'Homme';
+if ($maVariable != 'Homme') {
+    echo 'C\'est une développeuse !!!';
+} else {
+    echo 'C\'est un développeur !!!';
+}
+
+  
+
+echo "<br>";
+echo "<br>";
+/* Exercice 4 :
+Traduire ce code avec des if et des else :
+<?php
+echo ($monAge >= 18) ? 'Tu es majeur' : 'Tu n\'es pas majeur';
+?> */
+$monAge = null;
+if($monAge>=18) {
+    echo 'Tu es majeur';
+} else {
+    echo 'Tu n\'es pas majeur';
+}
 
 
 
 
+echo "<br>";
+echo "<br>";
+/* Exercice 5 :
+Traduire ce code avec des if et des else :
+<?php
+echo ($maVariable == false) ? 'c\'est pas bon !!!' : 'c\'est ok !!';
+?>  */
+$maVariable = false;
+if($maVariable == false) {
+    echo 'c\'est pas bon !!!';
+} else {
+    echo 'c\'est ok !!';    
+}
 
 
 
+echo "<br>";
+echo "<br>";
+/* Exercice 6 :
+Traduire ce code avec des if et des else :
+<?php
+echo ($maVariable) ? 'c'est ok !!' : 'c'est pas bon !!!';     // erreur syntaxe p/r aux apostrophes
+?>  */
+
+$maVariable = true;
+if($maVariable) {
+    echo "c'est ok !!";
+} else {
+ echo "c'est pas bon !!!";
+}
 
 
-
+echo "<br>";
+echo "<br>";
 
 
 ?>
