@@ -383,10 +383,178 @@ for($i= 200; $i>= 0; $i-=12) {
 }
 
 
+echo "<br>";
+echo "<br>";
+
+
+
+
+
+/* -----------------------------------  PHP - Les tableaux  */
+echo "<h1>LES TABLEAUX</h1>";
+
+/* Exercice 1
+Créer un tableau mois et l'initialiser avec les valeurs suivantes : -janvier - février - mars - avril - mai - juin - juillet - aout - septembre - octobre - novembre - décembre  */
+echo "<h3>Exercice 1</h3>";
+$mois = [
+    "janvier",
+    "février",
+    "mars",
+    "avril",
+    "mai",
+    "juin",
+    "juillet",
+    "aout",
+    "septembre",
+    "octobre",
+    "novembre",
+    "décembre"];
+
+var_dump($mois);
+echo "<br>";
+echo "<br>";
+
+foreach($mois as $value) {
+    echo "$value <br>";
+}
+
+echo "<br>";
+echo "<br>";
+
+/* Exercice 2
+Avec le tableau de l'exercice 1, afficher la valeur de la troisième ligne de ce tableau.  */
+echo "<h3>Exercice 2</h3>";
+
+echo $mois[2];
 
 
 echo "<br>";
 echo "<br>";
+/* Exercice 3
+Avec le tableau de l'exercice , afficher la valeur de l'index 5.  */
+echo "<h3>Exercice 3</h3>";
+
+echo $mois[5];
+
+
+
+echo "<br>";
+echo "<br>";
+/* Exercice 4
+Avec le tableau de l'exercice 1, modifier le mois deaout pour lui ajouter l'accent manquant.  */
+echo "<h3>Exercice 4</h3>";
+
+$mois[7] = "août";
+
+echo $mois[7];
+
+
+
+echo "<br>";
+echo "<br>";
+/* Exercice 5
+Créer un tableau associatif avec comme index le numéro des départements des Hauts de France et en valeur leur nom.*/
+echo "<h3>Exercice 5</h3>";
+
+$depHautDeFrance = [
+    "02" => "Aisne",
+    "59" => "Nord",
+    "60" => "Oise",
+    "62" => "Pas-de-Calais",
+    "80" => "Somme",
+];
+
+foreach($depHautDeFrance as $num => $value) {
+    echo "$num : $value <br>";
+}
+echo "<br>";
+
+// on peut aussi faire pour avoir que les valeurs
+/* foreach($depHautDeFrance as $x ) {
+    echo "$x <br>";
+}
+
+echo "<br>";
+ */
+
+
+echo "<br>";
+echo "<br>";
+/* Exercice 6
+Avec le tableau de l'exercice 5, afficher la valeur de l'index 59. */
+echo "<h3>Exercice 6</h3>";
+
+echo $depHautDeFrance["59"];
+
+
+
+echo "<br>";
+echo "<br>";
+/* Exercice 7
+Avec le tableau de l'exercice 5, ajouter la ligne correspondant au département de la ville de Reims.  */
+echo "<h3>Exercice 7</h3>";
+
+$depHautDeFrance["51"] = "Reims";
+
+var_dump($depHautDeFrance);
+
+
+echo "<br>";
+echo "<br>";
+/* Exercice 8
+Avec le tableau de l'exercice 1 et une boucle, afficher toutes les valeurs de ce tableau.  */
+echo "<h3>Exercice 8</h3>";
+
+foreach($mois as $x) {
+    echo "$x <br>";
+}
+
+
+
+echo "<br>";
+echo "<br>";
+// pour info on peut aussi faire pour avoir les index à côté :
+foreach($mois as $num => $value) {
+    echo "$num : $value <br>";
+}
+
+
+
+echo "<br>";
+echo "<br>";
+/* Exercice 9
+Avec le tableau de l'exercice 5, afficher toutes les valeurs de ce tableau.  */
+echo "<h3>Exercice 9</h3>";
+
+foreach($depHautDeFrance as $x) {
+    echo "$x <br>";
+}
+
+
+
+
+echo "<br>";
+echo "<br>";
+/* Exercice 10
+Avec le tableau de l'exercice 5, afficher toutes les valeurs de ce tableau ainsi que les clés associés.
+Cela pourra être, par exemple, de la forme : "Le département" + nom_departement + "a le numéro" + num_departement */
+echo "<h3>Exercice 10</h3>";
+
+foreach($depHautDeFrance as $num => $value) {
+    echo "Le département $value a le numéro $num <br>";
+}
+
+
+
+echo "<br>";
+echo "<br>";
+
+
+
+
+
+
+
 echo "<br>";
 echo "<br>";
 
