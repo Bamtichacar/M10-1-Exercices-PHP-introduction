@@ -228,8 +228,6 @@ if($monAge>=18) {
 }
 
 
-
-
 echo "<br>";
 echo "<br>";
 /* Exercice 5 :
